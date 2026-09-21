@@ -1,0 +1,164 @@
+.popular{
+    width: 100%;
+    &__content{
+        width: $main_width ;
+        height: 100%;
+        margin: 2.5rem auto;
+        @include responsive(sm){
+            width: 90%;
+        }
+        &-items{
+            @include centerize();
+            margin-top: 3.5rem;
+            gap: 1rem;
+            @include responsive(md){
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        &-item{
+           
+           height: 100%; 
+           position: relative;
+           
+        }
+
+        &-image{
+            @include centerize(center);
+            width:100% ;
+            height: 20rem;
+            background-color: $color_primary;
+            padding: 1.2rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.2s ease-in;
+            position: relative;
+
+            &:hover{
+                transform: translateY(-1rem);
+            }
+            &:hover &-online{
+                opacity: 0.5;
+                width: 100%;
+            }
+
+            &.active{
+                border: 0.2rem solid $color_secondary ;
+            }
+
+            &-shape{
+                height: 100%;
+            }
+
+            &-online{
+                width: 15rem;
+                height: 100%;
+                clip-path: polygon(30% 0 , 100% 0 , 100% 100% , 0 100%);
+                position: absolute;
+                top: 0;
+                @include centerize(center);
+                font-size: 2.5rem;
+                color: #fff;
+                transition: all 1s ease-in;
+                &.bg1{
+                    background-color: $color_orange ;
+                    right: 0;
+                    z-index: 10;
+                }
+                &.bg2{
+                    background-color: rgb(255, 189, 68);
+                    right: 0.8rem;
+    
+                }
+            }
+        }
+
+        &-pic{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+
+        &-info{
+            @include centerize();
+            width: 100%;
+            height: 50%;
+            margin: 1.5rem 0;
+            gap: 4.5rem;
+
+            &-name{
+                width: 50%;
+
+                &>h4{
+                    color: $color_white;
+                    font-size: 1.9rem;
+                    margin: 1rem 0;
+                    line-height: 2.6rem;
+                }
+
+                &>p{
+                    color: $color_white;
+                    font-size: $font_size_sm;
+                    margin: 1rem 0;
+                    line-height: 1.5rem;
+                }
+
+                &-description{
+                    margin: 0.8rem 0;
+                    @include centerize(flex-start);
+                    gap: 0.8rem ;
+                }
+
+                &-icon{
+                    @include centerize(center);
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    border-radius: 100%;
+                    border: 0.2rem solid $color_green ;
+                    box-shadow: 0 0 0.5rem $color_green ;
+
+                    &>span{
+                        width: 0.8rem;
+                        height: 0.8rem;
+                        border-radius: 100%;
+                        background-color: $color_green ;
+                    }
+                }
+
+                &-text{
+                    color: $color_white;
+                    font-size: $font_size_sm;
+                }
+            }
+
+            &-team{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &-item{
+                    @include centerize(flex-start);
+                    gap: 1.5rem;
+
+                    &>img{
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
+
+                    &>span{
+                        color: $color_white;
+                    }
+                }
+                
+                &-score{
+                    margin: 1.5rem 0 ;
+                    text-align: center;
+                    color: $color_orange;
+                }
+            }
+        }
+    }
+}

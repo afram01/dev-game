@@ -1,0 +1,89 @@
+.player{
+    &__content{
+        width: $main_width;
+        margin: 2rem auto;
+        &-items{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            margin-top: 5.5rem;
+            @include responsive(md){
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 6rem 1rem;
+            }
+            @include responsive(sm){
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        &-item{
+            @include centerize(center);
+            flex-direction: column;
+            position: relative;
+        }
+        &-number{
+            width: 4rem;
+            height: 7rem;
+            background: url(/public/images/number.png) no-repeat;
+            background-size: 30rem;
+            position: absolute;
+            top: -4rem;
+            left: 1.2rem;
+            &--1{
+                background-position: 0.3rem 0;
+            }
+            &--2{
+                background-position: -5.5rem 0;
+            }
+            &--3{
+                background-position: -12rem 0;
+            }
+            &--4{
+                background-position: -18.5rem 0;
+            }
+            &--5{
+                background-position: -25.4rem 0;
+            }
+
+        }
+        &-image{
+            width: 80%;
+            height: 20rem;
+            border: 0.4rem solid $color_white ;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            z-index: 1;
+        }
+        &-pic{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.2s ease-in;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        &-info{
+            width: 100%;
+            margin-top: 1.2rem;
+            @include centerize(center);
+            flex-direction: column;
+            gap: 0.3rem;
+            &-name{
+                color: $color_white;
+            }
+            &-position{
+                font-size: $font_size_sm;
+            }
+            &-text{
+                color: $color_items;
+            }
+            &-pos{
+                color: $color_white;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.main{
+    display: flex;
+}
+.devgame{
+    width: 83%;
+
+    @include responsive(md){
+        width: 100%;   
+    }
+}

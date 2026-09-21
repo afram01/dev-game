@@ -1,0 +1,35 @@
+//! Colors
+
+// Main Colors
+$color_primary : #202938;
+$color_secondary : #0761dc;
+$color_secondary_light : #4c78f9 ;
+$color_tertiary : #ff04ab ;
+
+// Other Colors
+$color_bg : #111a23 ;
+$color_white : #fff ;
+$color_black : #000 ;
+$color_items : #4c5564 ;
+$color_subtitle: #7a7a7a;
+$color_green : #007700 ;
+$color_orange : #eca819 ;
+$color_red_dark :#9b061c ;
+$color_red :red ;
+$color_red_light :#e31c3b ;
+$color_purple : #e73bf3 ;
+
+
+//! Fonts
+$font_poppins : "Poppins", sans-serif ;
+$font_sans : "DM Sans", sans-serif ;
+$font_rubic : "Rubik", sans-serif ;
+
+//! Font Size
+$font_size_sm : 1.1rem ;
+$font_size_defualt : 1.6rem ;
+$font_size_lg : 2.1rem ;
+$font_size_title : 2.5rem ;
+
+//! Width
+$main_width : 85% ;

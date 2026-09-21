@@ -1,0 +1,35 @@
+.dev-title{
+    @include centerize();
+    @include responsive(sm){
+        display: block;
+    }
+    &__list{
+        @include centerize();
+        gap: 2rem;
+        @include responsive(sm){
+            margin-top: 2rem;
+        }
+
+        &-item{
+           color: $color_white;
+           font-size: $font_size_defualt ;
+           font-weight: 600; 
+           padding: 0.8rem 0;
+           &.active{
+               color: $color_secondary ;
+               border-top: 0.2rem solid $color_secondary ;
+            }
+            &-chevron{
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 0.4rem ;
+                @include centerize(center);
+                color: $color_white ;
+                border: 0.1rem solid $color_secondary;
+                &.active{
+                    background-color: $color_secondary;
+                }
+            }
+        }
+    }
+}

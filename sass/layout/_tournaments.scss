@@ -1,0 +1,396 @@
+.tournaments{
+    
+    &__content{ 
+        width: $main_width;
+        height: 100%;
+        margin: 4.5rem auto;
+        &-main{
+            width: 100%;
+            height: 100%;
+            @include centerize();
+            margin-top: 3rem;
+            @include responsive(xxlg){
+               display: block;
+            }
+        }
+        &-left{
+            width: 65%;
+            height: 100%;
+            @include responsive(xxlg){
+               width: 100%;
+            }
+        }
+        
+        &-time{
+            width: 95%;
+            height: 1.5rem;
+            margin: 1rem auto;
+            border-radius: 1.5rem;
+            background-color: $color_bg;
+            &-percented{
+                width: 70%;
+                height: 100%;
+                border-radius: 1.5rem;
+                @include centerize(center);
+                font-size: $font_size_sm ;
+                background: linear-gradient(to right ,
+                $color_orange 15% ,
+                rgb(255, 203, 107) 70% ,
+                rgb(250, 213, 144) 100%);
+            }
+        }
+
+        &-battle{
+            width: 100%;
+            height: 50%;
+            padding: 1.5rem;
+            border-radius: 0.8rem;
+            background-color: $color_primary ;
+            @include centerize();
+
+            @include responsive(xxlg){
+               display: block;
+            }
+
+            &-match{
+                min-width: 0;
+                width: 63%;
+                height: 100%;
+                @include responsive(xxlg){
+                    width: 100%;
+                    margin-bottom: 3rem;
+                }
+            }
+            &-head{
+                margin-bottom: 2rem;
+                &>h3{
+                    color: $color_white ;
+                    font-size: $font_size_title ;
+                    margin-bottom: 0.5rem;
+                }
+                &>p{
+                    color: $color_green;
+                    font-size: $font_size_sm;
+                }
+            
+            }
+            &-table{
+                margin: 3rem 0;
+                @include centerize();
+            }
+            &-sward{
+                width: 4rem;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &-group{
+                width: 35% ;
+                height: 100%;
+
+                @include responsive(lg){
+                    width: 100%;
+                }
+            }
+            
+            &-title{
+                @include centerize() ;
+                margin-bottom: 0.8rem;
+            }
+            &-icon{
+                background-color: $color_secondary;
+                width: 12%;
+                height: 3.2rem;
+                @include centerize(center) ;
+                border-radius: 0.5rem;
+                color: $color_white ;
+                font-size: $font_size_defualt ;
+            }
+            &-text{
+                background-color: $color_secondary;
+                width: 70%;
+                height: 3.2rem;
+                @include centerize(center) ;
+                border-radius: 0.5rem;
+                color: $color_white ;
+                font-size: $font_size_defualt ;
+            }
+            &-items{
+                @include centerize(center) ;
+                flex-direction: column;
+                gap: 0.5rem;
+                
+            }
+            &-item{
+                width: 100% ;
+                height: 4.5rem;
+                padding: 0.8rem ;
+                @include centerize() ;
+                background-color: $color_bg ;
+                border-radius: 0.5rem;
+
+                &.active{
+                    background-color: $color_red_dark ;
+                }
+
+                &:hover{
+                    background-color: $color_red_dark ;
+                    .tournaments__content-battle-number{
+                        background-color: #710819 ;
+                    }
+                }
+            }
+            &-info{
+                width: 75%;
+                @include centerize(flex-start) ;
+                gap: 0.6rem ;
+            }
+            &-number{
+                width: 2.8rem;
+                height: 2.5rem;
+                @include centerize(center) ;
+                background-color: $color_primary ;
+                border-radius: 0.5rem;
+                color: $color_white ;
+                font-size: 1.2rem ;
+
+                &.active{
+                    background-color: #710819 ;
+                }
+
+            }
+            &-img{
+                width: 2.1rem;
+                height: 2.1rem;
+            }
+            &-name{
+                color: $color_white ;
+                font-size: 1.4rem ;
+            }
+            &-score{
+                @include centerize() ;
+                gap: 0.7rem;
+            }
+            &-points{
+                color: $color_white ;
+                font-size: 1.2rem ;
+            }
+        }
+
+        &-game{
+            width: 100%;
+            height: 20%;
+            margin-top: 1.2rem;
+            padding: 1.2rem;
+            border-radius: 0.8rem;
+            background-color: $color_primary ;
+            @include centerize();
+            position: relative;
+            overflow: hidden;
+
+            @include responsive(sm){
+                display: grid;
+                grid-template-columns: repeat(3 , 0.2fr);
+                justify-content: flex-start ;
+                gap: 1.5rem 1rem;
+            }
+            
+            &-info{
+                @include centerize();
+                img{
+                    width: 6.5rem;
+                    height: 6.5rem;
+                }
+                @include responsive(sm){
+                    grid-column: 1/-1;
+                    justify-content: flex-start;
+                }
+            }
+            &-description{
+                margin-left: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+            &-people{
+                color: $color_items;
+                font-size: $font_size_sm ;
+            }
+            &-details{
+                @include centerize();
+                flex-direction: column ;
+                gap: 0.4rem;
+                position: relative;
+                
+                &::before{
+                    content: "";
+                    width: 0.2rem;
+                    height: 7.5rem;
+                    background-color: $color_items;
+                    position: absolute;
+                    left: -2.1rem;
+                    transform: rotate(28deg);
+                    top: -1.8rem;
+                    opacity: 0.35;
+
+                    @include responsive(sm){
+                        display: none;
+                    }
+                }
+            }
+            &-question{
+                color: $color_white;
+            }
+            &-answer{
+                color: $color_items;
+                font-size: 1.3rem;
+            }
+            &-offer{
+                width: 10rem;
+                height: 100%;
+            }
+            &-bg{
+                width: 15rem;
+                height: 100%;
+                clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+                position: absolute;
+                top: 0;
+                @include centerize(center) ;
+                font-size: $font_size_title;
+                color: $color_white;
+                font-family: $font_rubic ;
+                &.bg1{
+                    background-color: $color_purple;
+                    right: 0;
+                    z-index: 10;
+                }
+
+                &.bg2{
+                    background-color: $color_purple;
+                    right: 1rem;
+                    opacity: 0.6;
+                }
+
+                &.bg3{
+                    background-color: $color_secondary_light;
+                    right: 0;
+                    z-index: 10;
+                }
+
+                &.bg4{
+                    background-color: $color_secondary_light;
+                    right: 1rem;
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        &-show{
+            width: 100%;
+            height: 4rem;
+            margin-top: 1rem;
+            background-color: $color_secondary ;
+            color: $color_white ;
+            @include centerize(center) ;
+            border-radius: 0.8rem;
+            font-size: 1.4rem;
+            &:hover{
+            cursor: pointer;
+            }
+        }
+
+        &-closing{
+            width: 33%;
+            min-width: 0;
+            height: 100%;
+            background-color: $color_primary ;
+            padding: 1.9rem;
+            border-radius: 0.8rem;
+
+            @include responsive(xxlg){
+               width: 100%;
+               margin-top: 2rem;
+            }
+
+            &-items{
+                width: 100%;
+                height: 65%;
+                margin-top: 2rem;
+
+                @include responsive(xxlg){
+                    display: grid;
+                    grid-template-columns: repeat(2 , 1fr);   
+                    gap: 1.5rem;
+                }
+
+                @include responsive(md){
+                    display: flex ;
+                    flex-direction: column;
+                }
+            }
+            &-item{
+                width: 100%;
+                height: 50% ;
+                min-width: 0;
+            }
+            &-teams{
+                width: 100%;
+                @include centerize(center) ;
+
+                @include responsive(md){
+                    gap: 3rem;
+                }
+            }
+            &-score{
+                color: $color_white;
+                @include centerize(center) ;
+                flex-direction: column;
+                span{
+                    width: 4rem;
+                    font-weight: 700;
+                    font-size: 2rem;
+                }
+            }
+            &-btn{
+                
+                width: 85%;
+                color: $color_black;
+                @include centerize(center) ;
+                margin: 3.3rem auto 2.5rem auto;
+                padding: 1.2rem 0;
+                border-radius: 0.4rem;
+                font-weight: 600 ;
+                background: linear-gradient(
+                to right ,
+                rgb(221, 145, 0), 
+                rgb(255, 237, 151) ,
+                rgb(187, 134, 29) ,
+                rgb(255, 237, 151) , 
+                rgb(221, 145, 0)
+                );
+                transition: all 0.25s ease-in ;
+                @include responsive(xxlg){
+                    width: 50%;
+                }
+                @include responsive(lg){
+                    width: 100%;
+                }
+
+                &:hover{
+                    background: linear-gradient(
+                    to right ,
+                    rgb(255, 237, 151) ,
+                    rgb(221, 145, 0),
+                    rgb(255, 237, 151) , 
+                    rgb(221, 145, 0),
+                    rgb(255, 237, 151)
+                    );
+                    letter-spacing: 0.15rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

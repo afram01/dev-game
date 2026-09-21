@@ -1,0 +1,89 @@
+.dev-team{
+    width: 16rem;
+    height: 18rem;
+    @include centerize(center);
+    flex-direction: column;
+    margin: 0.4rem;
+
+    &__circle{
+        width: 11rem;
+        height: 11rem;
+        border-radius: 50%;
+        @include centerize(center);
+        box-shadow: 0 0 2rem $color_secondary_light;
+        &.big{
+            width: 15rem;
+            height: 15rem;
+        }
+
+        &-1{
+            background-image: conic-gradient(
+            $color_red 25% , 
+            $color_purple 0
+            );
+        }
+        &-2{
+            background-image: conic-gradient(
+            $color_red 25% , 
+            blue 0
+            );
+        }
+        &-3{
+            background-image: conic-gradient(
+            $color_orange 25% , 
+            blue 0
+            );
+        }
+
+        &-circle{
+            width: 95%;
+            height: 95%;
+            border-radius: 100%;
+            @include centerize(center);
+
+            &-1{
+                background: radial-gradient(
+                circle , 
+                $color_red_dark 0, 
+                $color_red_light 50%, 
+                $color_primary 100%
+                );
+            }
+            &-2{
+                background: radial-gradient(
+                circle , 
+                #0658c6 0, 
+                #0c678a 50%, 
+                $color_primary 100%
+                );
+            }
+            &-3{
+                background: radial-gradient(
+                circle , 
+                $color_orange 0, 
+                $color_orange 50%, 
+                $color_primary 100%
+                );
+            }
+        }
+
+        &-img{
+            width: 50%;
+            object-fit: cover
+        }
+    }
+
+    &__info{
+        @include centerize(center);
+        flex-direction: column;
+        margin-top: 2rem;
+        h3{
+            color: $color_white;
+            font-size: 1.4rem ;
+        }
+        span{
+            color: $color_items;
+            font-size: $font_size_sm ;
+        }
+    }
+}

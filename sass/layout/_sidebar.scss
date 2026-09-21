@@ -1,0 +1,195 @@
+.sidebar{
+    width: 17%;
+    height : 100% ;
+    background-color: $color_primary ;
+    border-radius: 0 0 1rem 1rem;
+    position: sticky;
+    top: 0;
+
+    @include responsive(md){
+        position: fixed;
+        left: -75%;
+        width: 40%;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+        
+
+    &__playtoo{
+        width: 100%;
+        @include centerize(center) ;
+        flex-direction: column ;
+        padding: 2.5rem;
+        gap: 1rem;
+
+         @include responsive(md){
+            margin-top: 3rem;
+        }
+
+        &-img{
+            width: 50%;
+        }
+        &-text{
+            color: $color_white;
+            font-size: $font_size_title;
+            font-weight: 600;
+        }
+    }
+
+    &__filter{
+        width: 90%;
+        height: 4.5rem;
+        background-color: $color_secondary ;
+        border-radius:0 0.2rem 0.2rem 0;
+        @include centerize(flex-end) ;
+        &-text{
+            color: $color_white;
+            letter-spacing: 0.2rem;
+            font-size: $font_size_defualt;
+            padding: 1rem;
+        }
+    }
+
+    &__tournaments{
+        width: 100%;
+        padding: 2rem ;
+        border-bottom: 0.3rem solid $color_black ;
+        &-items{
+            display: flex;
+            margin-bottom : 0.8rem ; 
+        }
+        &-item{
+            @include centerize(center);
+            color: $color_items ;
+            opacity: 0.5;
+            gap: 1rem;
+            transition: all 0.2s ease-in;
+            @include responsive(md){
+                margin-top: 1.2rem;
+            }
+            
+
+            &:hover{
+                color: $color_white;
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+        &-icon{
+            width: 4rem;
+            height: 4.5rem;
+            background: url(/public/images/sidebar-slider.png) no-repeat;
+            background-size: cover;
+
+            @include responsive(md){
+                display: none;
+            }
+            @include responsive(md){
+                display: inline;
+            }
+
+            &--1{
+                background-position: -3.8rem 0;
+            }
+            &--2{
+                background-position: 0 0;
+            }
+            &--3{
+                background-position: -14.2rem 0;
+            }
+            &--4{
+                background-position: -7.2rem 0;
+            }
+            &--5{
+                background-position: -10.6rem 0;
+            }
+        }
+        &-text{
+            font-size: $font_size_sm;
+        }
+    }
+
+    &__friends{
+        padding: 2rem 2rem;
+        &-title{
+            color: $color_white;
+            font-size: $font_size_lg;
+        }
+        &-list{
+            padding-top: 2rem ;
+        }
+        &-item{
+            @include centerize();
+            margin-bottom: 1.5rem ;
+        }
+        &-info{
+            @include centerize(flex-start);
+            gap: 1rem;
+            color: $color_items;
+            &-pic{
+                width: 2.8rem;
+                height: 2.8rem;
+                background: url(/public/images/pic-user.png) no-repeat;
+                background-size: cover;
+                border: 0.1rem solid $color_white;
+                border-radius: 100%;
+            }
+            &-text{
+                font-size: $font_size_sm;
+            }
+        }
+        &-online{
+            width: 2rem;
+            height: 100%;
+            @include centerize(center);
+            &-wifi{
+                color: $color_items;
+                width: 1.5rem;
+            }
+            &-dotted{
+                width: 0.8rem;
+                height: 0.8rem;
+                border-radius: 100%;
+                background-color: green;
+            }
+        }
+    }
+
+    &__rocket{
+        padding: 2rem 3rem;
+        width: 100%;
+        
+        &-pic{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem ;
+            transition: all 0.2s ease-in;
+
+            &:hover{
+                cursor: pointer;
+                border: 0.1rem solid $color_secondary;
+                padding: 0.4rem;
+            }
+        }
+    }
+
+    &__close{
+        display: none;
+        @include responsive(md){
+            display: inline-block;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+       &-icon{
+        display: none;
+        @include responsive(md){
+            color: white;
+            display: inline;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+       } 
+    }
+}
