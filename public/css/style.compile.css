@@ -476,7 +476,7 @@ body {
 .sidebar__tournaments-icon {
   width: 4rem;
   height: 4.5rem;
-  background: url(/public/images/sidebar-slider.png) no-repeat;
+  background: url(../images/sidebar-slider.png) no-repeat;
   background-size: cover;
   /* media -> width:1400px */
   /* media -> width:1200px */
@@ -547,7 +547,7 @@ body {
 .sidebar__friends-info-pic {
   width: 2.8rem;
   height: 2.8rem;
-  background: url(/public/images/pic-user.png) no-repeat;
+  background: url(../images/pic-user.png) no-repeat;
   background-size: cover;
   border: 0.1rem solid #fff;
   border-radius: 100%;
@@ -745,7 +745,7 @@ body {
 .header__content-info-img {
   width: 3.5rem;
   height: 3.5rem;
-  background: url(/public/images/pic-user.png) no-repeat;
+  background: url(../images/pic-user.png) no-repeat;
   background-size: cover;
   border: 0.2rem solid #0761dc;
   border-radius: 100%;
@@ -829,6 +829,7 @@ body {
 @media only screen and (max-width: 48em) {
   .popular__content-items {
     display: grid;
+    text-align: center;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1015,7 +1016,7 @@ body {
 .player__content-number {
   width: 4rem;
   height: 7rem;
-  background: url(/public/images/number.png) no-repeat;
+  background: url(../images/number.png) no-repeat;
   background-size: 30rem;
   position: absolute;
   top: -4rem;

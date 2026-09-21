@@ -1,6 +1,6 @@
 .sidebar{
     width: 17%;
-    height : 100% ;
+    height : 100%;
     background-color: $color_primary ;
     border-radius: 0 0 1rem 1rem;
     position: sticky;
@@ -79,7 +79,7 @@
         &-icon{
             width: 4rem;
             height: 4.5rem;
-            background: url(/public/images/sidebar-slider.png) no-repeat;
+            background: url(../images/sidebar-slider.png) no-repeat;
             background-size: cover;
 
             @include responsive(md){
@@ -130,7 +130,7 @@
             &-pic{
                 width: 2.8rem;
                 height: 2.8rem;
-                background: url(/public/images/pic-user.png) no-repeat;
+                background: url(../images/pic-user.png) no-repeat;
                 background-size: cover;
                 border: 0.1rem solid $color_white;
                 border-radius: 100%;
