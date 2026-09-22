@@ -19,7 +19,9 @@
         }
 
         &-item{
-           
+           @include responsive(md){
+                display: contents;
+            }
            height: 100%; 
            position: relative;
            
